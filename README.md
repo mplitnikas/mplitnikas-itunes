@@ -18,7 +18,7 @@ The display components themselves are built as stateless functional components. 
 
 Redux also has the advantage of allowing middleware to listen in on actions that are passed between components and the store: I was able to add redux-devtools to listen to the internal state while developing, and it would be easy to add Google Analytics to the application later on.
 
-## Future Improvements
+## Future Improvements / Tech Debt
 
 ### 1. Sort feature for song list
 
@@ -39,3 +39,11 @@ Fortunately, since the display components are built in a functional pattern they
 ### 4. Automated testing / deployment
 
 Building on item 3, it would be useful to have automated testing happen when committing this code, to help prevent broken builds from making it to master.
+
+### 5. Component-level CSS / CSS preprocessor
+
+Styling is currently all in one file, which makes it harder to reuse components between this project and others. Ideally I could move the CSS into individual files at the level of each component or group of components, so that they're self-contained. In addition, having a CSS preprocessor like LESS or SASS would make it possible to make the styling more concise, and make it easier to create a modular layout / style to which I could add different color schemes.
+
+### 6. Deployment
+
+Deployment to Github had some bumps in the road; in particular there are some issues around the CSRF protection in Firefox preventing scripts from loading. In the future this would be addressed at the server level, changing the headers that go along with the HTTP response when index.html is server.
