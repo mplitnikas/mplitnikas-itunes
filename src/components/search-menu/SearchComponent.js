@@ -19,9 +19,9 @@ class SearchComponent extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row py-5 d-flex justify-content-center input-group">
+        <div className="py-5 d-flex justify-content-center input-group">
           <input
-            className="artist-search input-search p-3"
+            className="artist-search text-center p-2"
             placeholder="Search for an artist"
             onInput={this.handleSearchbarChange}
             onKeyPress={this.handleKeyPress}

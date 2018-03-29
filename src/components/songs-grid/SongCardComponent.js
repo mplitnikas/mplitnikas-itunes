@@ -8,7 +8,7 @@ const getAltText = (collectionName) => {
 
 const SongCard = ({songTitle, trackTime, trackNumber, imageUrl, albumName, artist, releaseYear}) => {
   return (
-    <div className="card-wrapper col-xl-3 col-lg-4 col-md-6 mb-5">
+    <div className="card-wrapper col-xl-3 col-lg-4 col-md-6 mb-5 d-flex justify-content-center">
       <div className="song-card">
         <header>
           <div className="card-title text-center p-2">
